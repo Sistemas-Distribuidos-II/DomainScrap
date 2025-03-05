@@ -93,10 +93,10 @@ function RegisterPage() {
             }
 
             <button
-                className='w-full bg-blue-500 text-white p-3 rounded-lg mt-2'
+                className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white p-3 rounded-lg mt-2'
             >Register</button>
 
-        </form>
+        </form> 
 
     </div>
   )

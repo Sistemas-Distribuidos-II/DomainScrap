@@ -5,6 +5,10 @@ module.exports = {
     ],
     theme: {
       extend: {
+        colors: {
+          darkblue: '#000435',
+          darkblue2: '#00032E'
+        },
         backgroundImage: {
           'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
           'gradient-conic':
