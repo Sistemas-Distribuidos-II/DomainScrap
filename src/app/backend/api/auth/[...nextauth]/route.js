@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import db from "@/config/db";
 import bcrypt from "bcryptjs";
 
-const authOptions = {
+export const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -46,6 +46,9 @@ const authOptions = {
       },
     }),
   ],
+  pages: {
+    signIn: "/frontend/pages/auth/login",
+  },
 };
 
 //Ejecución /backend/api/auth/signin
