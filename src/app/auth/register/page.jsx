@@ -37,7 +37,7 @@ function RegisterPage() {
   return (
     <div className="h-[calc(100vh-7rem)] flex justify-center items-center">
       <form onSubmit={onSubmit} className="w-1/4">
-        <h1 className="text-slate-200 font-bold text-4xl mb-4">Register</h1>
+        <h1 className="text-slate-200 font-bold flex justify-center text-4xl mb-4">Register</h1>
 
         <label htmlFor="username" className="text-slate-500 mb-2 block text-sm">
           Username:
