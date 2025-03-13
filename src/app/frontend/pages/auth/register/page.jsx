@@ -1,6 +1,7 @@
-"use client"
-import React from 'react'
-import {useForm} from 'react-hook-form'
+"use client";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 
 function RegisterPage() {
 
@@ -8,7 +9,8 @@ function RegisterPage() {
         register,
         handleSubmit,
         formState: {errors},
-    } = useForm();   
+    } = useForm();
+    const router = useRouter()
 
     const onSubmit = handleSubmit(async (data) => {
         
@@ -29,11 +31,13 @@ function RegisterPage() {
                 'Content-Type': 'application/json'
             }
         })
-        const resJSON = await res.json()
-        console.log(resJSON)
+
+        if (res.ok) {
+            router.push('/frontend/pages/auth/login')
+        }
     });
 
-    console.log(errors)
+    console.log(errors);
 
   return (
     <div className='h-[calc(100vh-7rem)] flex items-center justify-center'>
