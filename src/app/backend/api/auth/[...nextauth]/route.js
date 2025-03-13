@@ -1,22 +1,22 @@
-import NextAuth from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import db from "@/config/db";
-import bcrypt from "bcryptjs";
+import NextAuth from 'next-auth';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import db from '@/config/db';
+import bcrypt from 'bcrypt';
 
 export const authOptions = {
   providers: [
     CredentialsProvider({
-      name: "Credentials",
+      name: 'Credentials',
       credentials: {
         email: {
-          label: "Email",
-          type: "email",
-          placeholder: "Sistemas-Distribuidos-II",
+          label: 'Email',
+          type: 'email',
+          placeholder: 'Sistemas-Distribuidos-II',
         },
         password: {
-          label: "Password",
-          type: "password",
-          placeholder: "********",
+          label: 'Password',
+          type: 'password',
+          placeholder: '********',
         },
       },
       async authorize(credentials, req) {
@@ -47,7 +47,7 @@ export const authOptions = {
     }),
   ],
   pages: {
-    signIn: "/frontend/pages/auth/login",
+    signIn: '/frontend/pages/auth/login',
   },
 };
 
